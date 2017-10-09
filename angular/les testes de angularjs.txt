@@ -1,0 +1,121 @@
+********************************************************************les sites:
+https://angularjs.org/
+
+
+
+**************************************************
+
+
+
+<!DOCTYPE html>
+<html ng-app="myApp" ng-init="nombres=['1','2','3'];name='khadija';num='06 57 07 55 58' ">
+****ng-init permet d'effectuer des données a des variables
+<head>
+	<title> page angular</title>
+	<script type="text/javascript" src="angular/angular.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+***** appeler la page main.js
+</head>
+<body>
+
+ 
+*****pour appellé les variable deja creer on utlise le code :
+ 
+ <p> name:{{name}}</p>
+ <br>
+ num tel:{{num}}
+ <ul ng-repeat="nombre in nombres" >
+<li>{{nombre}}</li>
+</ul>
+ <div ng-controller="myCtr">
+ <ul ng-repeat="nom in names" >
+<li>{{nom}}</li>
+</ul>
+
+</div>
+ </br>
+</body>
+</html>
+****** pour ajouter/afficher les images sous le meme nom du personne afficher et faire des recherche:
+**index.html
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+	<title> page angular</title>
+	<script type="text/javascript" src="angular/angular.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+
+ <div ng-controller="myCtr">
+ Search: <input type="text" ng-model="Searching">
+ <table>
+
+ 	<tr ng-repeat="friend in friends|filter: Searching">
+ 		<td>
+ 			<img src="image/{{friend.name}}.png" wigth="100" height="100">
+ 		</td>
+ 		<td>
+ 		  <h3> {{friend.name}} </br></h3>
+ 		  {{friend.desc}}
+ 		</td>
+
+ 	</tr>
+ </table>
+ 
+
+</div>
+ </br>
+</body>
+</html>
+
+**main.js
+var app = angular.module("myApp",[]);
+
+ app.controller( "myCtr",function ($scope){
+/*$scope.names=['sara','tamtam','nouha'];*/
+
+$scope.friends = [{name:'sara', desc:'ingeneir'},
+                    { name:'nouha', desc:'tech'},
+                    { name:'fati', desc:'etudiante'}];
+                });
+
+
+
+
+***** Json.js
+***index.html
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+	<title> page angular</title>
+	<script type="text/javascript" src="angular/angular.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+
+ <div ng-controller="myCtr">
+
+ <table>
+
+ 	<tr ng-repeat="friend in news">
+ 		<td>
+ 			<img src="image/{{friend.Picturlink}}" wigth="100" height="100">
+ 		</td>
+ 		<td>
+ 		  <h3> {{friend.NewTitle} </br></h3>
+ 		  
+ 		</td>
+
+ 	</tr>
+ </table>
+ 
+
+</div>
+ </br>
+</body>
+</html>
+
+***main.js

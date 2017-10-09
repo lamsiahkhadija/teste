@@ -1,0 +1,81 @@
+
+<style>
+/* Tableau */
+.tableau {
+  width:100%;
+  table-layout: fixed;
+  border-collapse: separate; /* pour ligné */
+ /* border-spacing: 1px; // pour contrer les style de base */
+}
+.tableau caption {
+  font-size:1.4rem;
+  color:#ffffff;
+  background-color: #5d625c;
+ /* caption-side: bottom; // Ex : aligné en bas */
+}
+
+/* Entête */
+.tableau th {
+  background-color:#999690;
+  color:#fff;
+}
+
+/* Pied */
+.tableau tfoot td {
+  color:#fff;
+  background-color:#999690;
+  border-top:1px solid #5d625c;
+  border-bottom:1px solid #5d625c;
+}
+
+/* Colonnes avec classes */
+.tableau col.col1 {
+  background-color:#d6d3ce;
+}
+.tableau col.col2 {
+  background-color:#dddad4;width:100px;text-align:right;
+}
+.tableau col.col3 {
+  background-color:#c6c3bd;color:#fff;width:100px;text-align:right;
+}
+.tableau col.col4 {
+  background-color:#c6c3bd;color:#fff;width:100px;text-align:right;
+}
+.tableau col.col5 {
+  background-color:#c6c3bd;color:#fff;width:100px;text-align:right;
+}
+
+/* Alignement par colonnes sans classe */
+.tableau td:nth-child(2) {
+  text-align:right;
+}
+.tableau td:nth-child(3) {
+  text-align:right;
+}
+</style><table class="tableau">
+  
+  <colgroup>
+    <col class="col1" />
+    <col class="col2" />
+    <col class="col3" />
+    <col class="col4" />
+    <col class="col5" />
+  </colgroup>
+  <thead>
+    <tr><th style="text-align:left;">Description</th><th>Quantité</th><th>Unité</th><th>Prix unité</th><th>Prix Total</th></tr>
+  
+  
+  </thead>
+  <tfoot>
+    <tr><td></td><td>10</td><td>633</td><td>1</td><td>28</td></tr>
+  </tfoot>
+  <tbody>
+    <tr><td>Montréal</td><td>1</td><td>28</td><td>1</td><td>28</td></tr>
+    <tr><td>Éloi</td><td>1</td><td>-20</td><td>1</td><td>28</td></tr>
+    <tr><td>Rivière-du-Loup</td><td>1</td><td>21</td><td>1</td><td>28</td></tr>
+    <tr><td>Cacouna</td><td>1</td><td>26</td><td>1</td><td>28</td></tr>
+    <tr><td>Les Boules</td><td>1</td><td>-12</td><td>1</td><td>28</td></tr>
+    <tr><td>Saint-Arsène</td><td>1</td><td>32</td><td>1</td><td>28</td></tr>
+    <tr><td>Rimouski</td><td>1</td><td>470</td><td>1</td><td>28</td></tr>
+    <tr><td>L’Isle-Verte</td><td>1</td><td>49</td><td>1</td><td>28</td></tr>
+    <tr><td>Rimouski</td><td>1</td><td>39</td><td>1</td><td>28</td></tr>

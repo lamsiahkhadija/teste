@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript">
+	function checkInp()
+{
+var x=document.forms["myForm"]["age"].value;
+if (x consists of any letters) // this is the code I need to change
+{
+alert("Must input numbers");
+return false;
+}
+}
+</script>
+
+
+<head>
+	<title></title>
+</head>
+<body>
+<form name="myForm" action="" onsubmit="return checkInp()" method="post">
+    First name: <input type="text" name="age">
+<input type="submit" value="Submit"> 
+
+</body>
+</html>

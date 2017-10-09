@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+	<title> page angular</title>
+	<script type="text/javascript" src="angular/angular.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+
+ <div ng-controller="myCtr">
+ Search: <input type="text" ng-model="Searching">
+ <table>
+
+ 	<tr ng-repeat="friend in friends|filter: Searching">
+ 		<td>
+ 			<img src="image/{{friend.name}}.png" wigth="100" height="100">
+ 		</td>
+ 		<td>
+ 		  <h3>  {{friend.name}} </br></h3>
+ 		  		{{friend.desc}}
+ 		  <input type="submit" ng-click="clicme(friend.name,friend.desc)">
+ 		</td>
+
+ 	</tr>
+ </table>
+ <br/> Update info
+ <br>
+ name: <input type="text" ng-model="updatename"> 
+ </br>
+ <br>desc:<input type="text" ng-model="updatedesc"> </br>
+
+</div>
+ </br>
+</body>
+</html>
